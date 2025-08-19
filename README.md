@@ -213,23 +213,30 @@ REACT_APP_API_URL=http://localhost:8080
 REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 ```
 
-#### Install Recommended VS Code Extensions
-1. **ES7+ React/Redux/React-Native snippets**
-2. **Prettier - Code formatter**
-3. **ESLint**
-4. **Auto Rename Tag**
-5. **Bracket Pair Colorizer**
-6. **GitLens**
-
 #### Run Frontend in VS Code
 **In VS Code terminal**:
 ```bash
 npm start
 ```
 
-✅ **Frontend will start on**: `http://localhost:3000`
+✅ **Frontend will start on**: `http://localhost:3000` (React's default port)
 
-### 5. Development Workflow
+> **Note**: If port 3000 is busy, React will automatically prompt to use the next available port (usually 3001)
+
+#### Verify Frontend is Running
+- React will automatically open your browser to the correct port
+- Manually check: `http://localhost:3000`
+- Should display the KNY Market Hub homepage
+
+### 5. Port Configuration Summary
+
+Your application uses the following ports:
+- **Backend (Spring Boot)**: `http://localhost:8080` ✅
+- **Frontend (React)**: `http://localhost:3000` ✅ (default)
+
+React automatically chooses port 3000 unless it's already in use. Your backend is correctly configured to accept requests from port 3000 via CORS settings.
+
+### 6. Development Workflow
 
 #### Backend Development (STS)
 - **Auto-restart**: STS supports Spring Boot DevTools for automatic restart
@@ -516,4 +523,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Spring Boot** community for excellent documentation
 - **React** community for comprehensive ecosystem
 
-\
